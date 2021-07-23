@@ -1,18 +1,28 @@
 {
   "menu":[
     {
-      "name":"Home",
-      "title":"My Home",
+      "name":"Features",
+      "title":"My Features",
       "link":"/home"
     },
     {
-      "name":"about",
-      "title":"My About",
+      "name":"Docs",
+      "title":"My Docs",
       "link":"/about"
     },
     {
-      "name":"Contact",
-      "title":"My Contact",
+      "name":"Resource",
+      "title":"My Resource",
+      "link":"/contact"
+    },
+    {
+      "name":"Events",
+      "title":"My Events",
+      "link":"/contact"
+    },
+    {
+      "name":"Blog",
+      "title":"My Blog",
       "link":"/contact"
     }
   ],

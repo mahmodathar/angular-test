@@ -1,3 +1,4 @@
+import { HttpService } from './../services/http.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,27 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  menuItems : any[]= []
+  menuItems:any;
+  db:any= {};
+  isData = false
 
-  constructor() { }
+  constructor(
+    private httpService:HttpService
+  ) { }
 
   ngOnInit(): void {
     this.createMenuItem();
+    this.httpService.getDB().subscribe( (data:any) =>{
+      this.db = data;
+      this.isData = true;
+    })
   }
 
   createMenuItem(){
+     this.httpService.getMenu().subscribe( data => {
+       this.menuItems = data
+     })
+  }
 
-    let item = {
-      title:"myTitle",
-      link:"mylink",
-      url:"myurl"
-    }
-
-    for(let i =0; i <= 5; i++){
-        console.log(i);
-        this.menuItems.push(item)
-    }
-
+  createLogo(){
 
   }
 

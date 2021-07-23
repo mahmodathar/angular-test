@@ -1,6 +1,8 @@
-<div class="heder-holder">
+<div class="heder-holder" *ngIf="isData">
   <div class="menu">
-    <h1>Logo</h1>
+    <h1>
+      <img [src]="db.logo.img" alt="">
+    </h1>
     <ul>
       <li *ngFor="let item of menuItems"><a href="">{{item.link}}</a></li>
     </ul>
